@@ -1,0 +1,9 @@
+# Plugin directories — installed at runtime, not tracked
+autoload/
+bundle/
+coc.nvim/
+lazy/
+pack/
+plugged/
+sessions/
+old.config/

@@ -27,15 +27,14 @@ vim.g.jedi_auto_initialization = 1
 vim.g.jedi_show_call_signatures = "1"
 
 -- ------------------------------
--- Python コードフォーマッターの設定 (Neoformat)
+-- Python コードフォーマッターの設定 (ruff)
 -- ------------------------------
 
--- Neoformat を使用し、Python のフォーマットに Black を設定
--- - `formatprg` は `gq` コマンドで実行されるフォーマッター
+-- ruff format を formatprg に設定（`gq` コマンドで実行）
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "python",
     callback = function()
-        vim.opt_local.formatprg = "black -"
+        vim.opt_local.formatprg = "ruff format -"
     end,
 })
 
@@ -71,5 +70,4 @@ vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
 -- ------------------------------
 
 -- ALE (Asynchronous Lint Engine) を使用した Linter 設定
--- - flake8 を使用し、Python のコード品質チェックを行う
-vim.g.ale_linters = { python = { 'flake8' } }
+vim.g.ale_linters = { python = { 'ruff' } }

@@ -1,0 +1,5 @@
+{
+  "python.pythonPath": "/Users/taku.tsuchida/.pyenv/versions/3.9.18/bin/python",
+  "tsserver.tsdk": "node_modules/typescript/lib"
+}
+

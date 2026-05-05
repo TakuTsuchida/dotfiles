@@ -20,12 +20,6 @@ require("lazy").setup({
 })
 
 -- 設定ファイルの読み込み
-local config_files = vim.fn.glob(vim.fn.stdpath('config') .. '/old.config/*.vim', true, true)
-table.sort(config_files)
-for _, fname in ipairs(config_files) do
-    vim.cmd('source ' .. fname)
-end
--- 設定ファイルの読み込み
 local config_files = vim.fn.glob(vim.fn.stdpath('config') .. '/config/*.lua', true, true)
 table.sort(config_files)
 for _, fname in ipairs(config_files) do

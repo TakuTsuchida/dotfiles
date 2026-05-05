@@ -11,22 +11,7 @@ local result = handle:read("*a")
 handle:close()
 vim.g.python3_host_prog = result:gsub("^%s*(.-)%s*$", "%1")  -- trim
 
--- ------------------------------
--- Pythonコード補完設定 (Jedi)
--- ------------------------------
-
--- jedi-vim の補完機能を有効化
-vim.g.jedi_completions_enabled = 1
-
--- jedi-vim の自動初期化を有効化
-vim.g.jedi_auto_initialization = 1
-
--- 関数の引数シグネチャを表示
--- 1: バッファ内に表示 (デフォルト)
--- 2: コマンドラインに表示
-vim.g.jedi_show_call_signatures = "1"
-
--- ------------------------------
+--------------------------------
 -- Python コードフォーマッターの設定 (ruff)
 -- ------------------------------
 

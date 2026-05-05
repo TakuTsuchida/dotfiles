@@ -1,5 +1,7 @@
 {
-  "python.pythonPath": "/Users/taku.tsuchida/.pyenv/versions/3.9.18/bin/python",
-  "tsserver.tsdk": "node_modules/typescript/lib"
+  "tsserver.tsdk": "node_modules/typescript/lib",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticMode": "openFilesOnly",
+  "python.analysis.autoSearchPaths": true
 }
-

@@ -6,6 +6,9 @@
 # 環境変数
 export LANG=ja_JP.UTF-8
 
+if command -v gh >/dev/null 2>&1; then
+  export GITHUB_TOKEN="$(gh auth token 2>/dev/null)"
+fi
 
 # 色を使用出来るようにする
 autoload -Uz colors
